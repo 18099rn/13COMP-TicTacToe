@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>13COMP Ragavi TICTACTOE</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="13COMP firebase">
+    <meta name="keywords" content="13COMP, firebase">
+    <meta name="author" content="Ragavi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets *****************************************-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts *****************************************-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+    <!-- firebase start **************************************-->
+    <!-- Firebase App (core Firebase SDK) is always required & must be listed 1st -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <!-- firebase end ****************************************-->
+    <!-- Your modules ****************************************-->
+    <script defer src="reg_.js"></script>
+    <script defer src="fb_.js"></script>
+    <script defer src="pm_.js"></script>
+    <script defer src="ad_manager.js"></script>
+    <script defer src="ttt_game.js"></script>
+  </head>
+  <!--*************************************************************
+//  BODY
+**************************************************************-->
+  <body>
+    <!--*************************************************************
+  //  LANDING PAGE
+  **************************************************************-->
+    <section id="s_landingP">
+      <h1> Logging you in </h1>
+      <p>Ragavi's TicTacToe Game</p>
+    </section>
+    <!--*************************************************************
+  //  REGISTRATION PAGE
+  **************************************************************-->
+    <section id="s_regP" style="background-image: url('background.jpg');">
+      <form id="f_reg">
+        <h1 class="w3-center headFont">Registration Page</h1>
+        <div class="center">
+          <div class="w3-row w3-section">
+            <div class="w3-col w3-margin-top w3-center w3-margin-left" style="width: 50px">
+              <img src="user.png" alt="name" width="42" height="42">
+            </div>
+            <div class="w3-col m1">
+              <p id="p_regName" class="w3-white w3-border w3-padding w3-left" style="height: 40px; width: 200px;">"j"</p>
+            </div>
+            <div class="w3-col m1">
+              <br></br>
+            </div>
+            <div class="email">
+              <div class="w3-col w3-margin-top w3-center w3-margin-left " style="width: 50px">
+                <img src="email.png" alt="email" width="42" height="42">
+              </div>
+              <div class="w3-rest">
+                <p id="p_regEmail" class="w3-white w3-border w3-padding w3-left " style="height: 40px; width: 400px;" class="w3-col m3 w3-center"></p>
+              </div>
+            </div>
+          </div>
+          <div class="w3-row">
+            <div class="w3-col w3-center w3-margin-left" style="width: 50px">
+              <img src="gamer.png" alt="gameName" width="42" height="42">
+            </div>
+            <div class="w3-rest">
+              <div class="w3-col m3">
+                <input class="w3-input w3-border" required name="gameName" type="text" placeholder="Game Name">
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="w3-row w3-section">
+            <div class="w3-col w3-center w3-margin-left" style="width: 50px">
+              <img src="telephone.png" alt="phone" width="42" height="42">
+            </div>
+            <div class="w3-rest">
+              <input class="w3-input w3-border" required name="phone" type="number" placeholder="Phone" style="height: 40px; width: 300px;">
+            </div>
+          </div>
+          <div class="w3-row w3-section">
+            <div class="w3-col w3-center w3-margin-left" style="width: 50px">
+              <img src="symbol.png" alt="gender" width="42" height="42">
+            </div>
+            <div class="w3-col m3">
+              <select id="gender" style="height: 35px;">
+                <option value="f">female</option>
+                <option value="m">male</option>
+                <option value="o">other</option>
+                <option value="?">prefer not to say</option>
+              </select>
+            </div>
+            <div class="w3-col m1">
+              <br></br>
+            </div>
+            <div class="w3-col w3-margin-left" style="width: 50px">
+              <img src="age.png" alt="age" width="45" height="45">
+            </div>
+            <div class="w3-rest">
+              <input class="w3-input w3-border" min="16" required name="age" type="number" placeholder="Age" style="height: 40px; width: 200px;">
+            </div>
+          </div>
+          <div class="w3-col m1">
+            <br></br>
+          </div>
+          <div class="w3-rest">
+            <br></br>
+            <div class="button">
+              <button class="w3-button w3-block w3-ripple w3-padding w3-border
+                w3-margin-left" style="height: 40px; width: 200px;" onclick="reg_regDetailsEntered()" type="button" value="Submit"> Click to Register </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      </div>
+      </div>
+    </section>
+    <!--*************************************************************
+  ADMIN PAGE 
+  **************************************************************-->
+    <section id="s_adminP" class="w3-grey">
+      <div class="w3-row">
+        <div class="w3-container w3-grey w3-col m10">
+          <h1 class="w3-wide">Admin page</h1>
+        </div>
+      </div>
+      <nav id="n_admin" class="w3-bar stickyNav">
+        <button id="b_adHome" class="w3-button w3-block w3-col m3 
+                                   w3-medium w3-ripple w3-border" onclick="ad_home()" value="Submit">home </button>
+        <button id="b_adUser" class="w3-button w3-block w3-col m3 
+                                   w3-medium w3-ripple w3-small w3-border" onclick="ad_user()" value="Submit">users </button>
+        <button id="b_adBB" class="w3-button w3-block w3-col m3 
+                                 w3-medium w3-ripple w3-small w3-border" onclick="ad_BB()" value="Submit">BB </button>
+      </nav>
+      <div>
+        <div id="d_admin" class="w3-table-all w3-small w3-light-grey 
+                               w3-hoverable w3-border w3-bordered content">
+          <table id="t_userData"></table>
+        </div>
+      </div>
+    </section>
+    <!--*************************************************************
+  PLAYER LOBBY 
+  **************************************************************-->
+    <section id="s_playerL"></section>
+    <!--*************************************************************
+  INSTRUCTION PAGE 
+  **************************************************************-->
+    <section id="s_instructionsP">
+      <div class="w3-row">
+        <div class="w3-container w3-display-middle w3-col m10">
+          <h2> Ragavi's TicTacToe Game </h2>
+          <h1> How to play - The aim of this game is to get 3 of your symbols in a row. You will start out with either being x or o with you opponent being the other. If you are x you will start and you will click one one the 9 squares avaliable. Once a square is clicked you will be unable to click it again. You will then take turns with your opponent clicking different squares until all sqaures have been clicked. If you happen to get 3 of your symbols in a row before your opponent you win and vice versa. If neither you or your opponent have won by the time all boxes have been clicked then the game is a draw. </h1>
+        </div>
+        <div class="w3-container  w3-col m2">
+          <button id="b_inAdmin" class="w3-button w3-border w3-margin w3-display-topright" onclick="ad_admin()">
+            <h3>ADMIN </h3>
+          </button>
+        </div>
+        <div class="start_game">
+          <button class="w3-border w3-button w3-display-topright 
+          w3-margin-top w3-margin-right" onclick="gamePage();" type="button" value="Submit">
+            <h3>Start Game</h3>
+          </button>
+        </div>
+        <br>
+        <div class="gameCanvas">
+          <div id="canvasGoesHere" class="w3-container w3-col m10"></div>
+        </div>
+      </div>
+      </br>
+    </section>
+    <!--*************************************************************
+      GAME PAGE 
+  **************************************************************-->
+    <!-- MAIN ROW ++++++++++++++++++++++++++++-->
+    <section id="s_gameP">
+      <div id="PAGE" class="w3-row w3-border">
+        <div id="LH" class="w3-container w3-display-topleft" style="width:20%">
+          <h1>You</h1>
+          <h2 id="h_name_1"></h2>
+          <p id="p_wins1"></p>
+          <p id="p_name1"></p>
+          <p id="p_gameName1"></p>
+        </div>
+        <!-- CENTER **********************************************-->
+        <div id="CENTER" class="w3-container w3-display-topmiddle" style="width:60%;" <!-- row 1 ********************************************-->
+          <!-- button 0 *******************************************-->
+          <center>
+            <h3>TICTACTOE</h3>
+            <div class="btn-group">
+              <button id="button0" onclick="buttonClicked(0)" class="w3-button w3-border-black w3-margin-top w3-margin-right w3-border" style="height: 200px; width: 200px;">
+                <img id="0o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-top w3-margin-left w3-left">
+                <img id="0x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+              <!-- button 1 *******************************************-->
+              <button id="button1" onclick="buttonClicked(1)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px;">
+                <img id="1o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class=" w3-margin-top w3-margin-left">
+                <img id="1x" src="xmark-solid.png" algat="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+              <!-- button 2 *******************************************-->
+              <button id="button2" onclick="buttonClicked(2)" class="w3-button w3-margin-top w3-margin-right 
+              w3-border w3-border-black" style="height: 200px; width: 200px; ">
+                <img id="2o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-left 
+              w3-margin-top">
+                <img id="2x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+            </div>
+            <!-- row 2 ***********************************************-->
+            <!-- button 3 *******************************************-->
+            <div class="btn-group">
+              <button id="button3" onclick="buttonClicked(3)" class="w3-button w3-margin-top w3-margin-right w3-border  w3-border-black" style="height: 200px; width: 200px;">
+                <img id="3o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-top w3-margin-left">
+                <img id="3x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-margin-left">
+              </button>
+              <!-- button 4 ****************************************-->
+              <button id="button4" onclick="buttonClicked(4)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px;">
+                <img id="4o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-left w3-margin-top">
+                <img id="4x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+              <!-- button 5 ****************************************-->
+              <button id="button5" onclick="buttonClicked(5)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px; ">
+                <img id="5o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-left w3-margin-top">
+                <img id="5x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+            </div>
+            <!-- row 3 ********************************************-->
+            <!--   <div id="g" class="w3-row w3-pink"> **-->
+            <!-- button 6 *******************************************-->
+            <div class="btn-group">
+              <button id="button6" onclick="buttonClicked(6)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px;">
+                <img id="6o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-top w3-margin-left">
+                <img id="6x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-margin-left">
+              </button>
+              <!-- button 7 *****************************************-->
+              <button id="button7" onclick="buttonClicked(7)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px;">
+                <img id="7o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-left w3-margin-top">
+                <img id="7x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+              <!-- button 8 *****************************************-->
+              <button id="button8" onclick="buttonClicked(8)" class="w3-button w3-margin-top w3-margin-right w3-border w3-border-black" style="height: 200px; width: 200px;">
+                <img id="8o" src="o-solid (1).png" alt="O" style="display:none; width: 140px;" class="w3-margin-left w3-margin-top">
+                <img id="8x" src="xmark-solid.png" alt="X" style="display:none; width: 128px;" class="w3-right w3-margin-right w3-margin-bottom">
+              </button>
+          </center>
+        </div>
+        <div id="RH" class="w3-container w3-display-topright" style="width:20%">
+          <h1>Opponent</h1>
+          <h2 id="h_name_2"></h2>
+          <p id="p_wins2"></p>
+          <p id="p_name2"></p>
+          <p id="p_gameName2"></p>
+        </div>
+      </div>
+    </section>
+    <!-- END OF GAME PAGE +++++++++++++++++++++++++++++++-->
+  </body>
+</html>

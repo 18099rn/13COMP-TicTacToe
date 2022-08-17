@@ -1,0 +1,186 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: tahoma;
+  color: white;
+}
+
+p {
+font-family: 'Righteous', cursive;
+}
+
+h1 {
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 45px;
+}
+
+h3 {
+  color: white;
+  font-family: 'Dosis', sans-serif;
+  font-size: 35px;
+}
+
+canvas {
+  display: block;
+}
+
+
+/*------------------------------------------------------------*
+  LANDING page styling
+/*------------------------------------------------------------*/
+#s_landingP {
+background-image: url("background.jpg");
+color: white;
+  font-size: 100px;
+  font-family: 'Karla', sans-serif;
+  opacity: 100%;
+  text-align: center;
+ display: block;
+ height: 100vh; 
+}
+
+.hHeight {
+height: 100vh;
+}
+
+.gHeight {
+height: 100vh;
+}
+
+#canvasGoesHere {
+height: 70vh;
+}
+
+/*------------------------------------------------------------*
+  REGISTRATION page styling
+/*------------------------------------------------------------*/
+#s_regP {
+background-image: url("background.jpg");
+color: white;
+  display: none;
+  height: 100vh; 
+  font-size: 15px;
+  font-family: 'Karla', sans-serif;
+  opacity: 100%;
+  text-align: center;  
+}
+
+.center {
+ margin: auto; 
+ padding-top: 1%;
+ width: 60%;
+}
+
+.email {
+  margin: auto;
+  padding-left: 42%;
+}
+
+.button {
+  margin: auto;
+  padding-left: 30%;
+}
+.transparentBG {
+  background: rgb(0, 0, 0);
+  color: white; 
+}
+
+
+/*------------------------------------------------------------*
+  ADMIN page & BUTTON styling
+/*------------------------------------------------------------*/
+#s_adminP {
+  display: none;
+  height: 86vh;
+  overflow: scroll;
+}
+
+
+#b_gpAdmin {
+  display: none;  /* none = don't display element */
+}
+
+#admin {
+display: none;   
+}
+
+#b_inAdmin {
+  display: none;   /* none = don't display element */
+}
+
+/*------------------------------------------------------------*
+  INSTRUCTIONS page & BUTTON styling
+/*------------------------------------------------------------*/
+#s_instructionsP {
+  background-image: url("background.jpg");
+  color: white;
+  font-size: 100px;
+  font-family: 'Karla', sans-serif;
+  opacity: 100%;
+  text-align: center;
+  display: none;
+  height: 100vh; 
+}
+
+
+.startgame {
+ margin: auto; 
+ padding-top: 1%;
+ padding-right: 85%;
+}
+
+.gameCanvas {
+ margin: auto; 
+ padding-left: 20%;
+ padding-bottom: 40%;
+}
+  
+/*------------------------------------------------------------*
+  GAME page & BUTTON styling
+/*------------------------------------------------------------*/
+#s_gameP {
+  display: none; 
+  color: white; 
+  padding-right: 15%
+}
+
+#s_gameP {
+  background-image: url("background.jpg");
+  display: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  opacity: 100%;
+  text-align: center;
+}
+
+#PAGE {
+  height: 100vh;
+  width: 100%;
+}
+
+#LH {
+  height: 100vh; 
+  background-image: url("background.jpg");
+}
+
+#RH {
+  height: 100vh;
+  background-image: url("background.jpg");
+}
+
+#CENTER {
+  height: 100%;
+  background-image: url("gradient.jpg");
+  background-size: 100% 100%;
+}
+
+/*************************************************************
+/*    END OF CSS
+*************************************************************/
